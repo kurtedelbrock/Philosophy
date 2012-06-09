@@ -15,12 +15,12 @@
 		84C9AAD81582EBCF00D40F29 /* PLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9AAD71582EBCF00D40F29 /* PLAppDelegate.m */; };
 		84C9AADB1582EBCF00D40F29 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C9AAD91582EBCF00D40F29 /* MainStoryboard_iPhone.storyboard */; };
 		84C9AADE1582EBCF00D40F29 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C9AADC1582EBCF00D40F29 /* MainStoryboard_iPad.storyboard */; };
-		84C9AAE11582EBCF00D40F29 /* PLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9AAE01582EBCF00D40F29 /* PLViewController.m */; };
 		84C9AAE91582EBCF00D40F29 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C9AAE81582EBCF00D40F29 /* SenTestingKit.framework */; };
 		84C9AAEA1582EBCF00D40F29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C9AAC71582EBCF00D40F29 /* UIKit.framework */; };
 		84C9AAEB1582EBCF00D40F29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C9AAC91582EBCF00D40F29 /* Foundation.framework */; };
 		84C9AAF31582EBCF00D40F29 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84C9AAF11582EBCF00D40F29 /* InfoPlist.strings */; };
 		84C9AAF61582EBCF00D40F29 /* PhilosophyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9AAF51582EBCF00D40F29 /* PhilosophyTests.m */; };
+		84C9AB051582ED0400D40F29 /* PLNotesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9AB041582ED0400D40F29 /* PLNotesListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,14 +46,14 @@
 		84C9AAD71582EBCF00D40F29 /* PLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAppDelegate.m; sourceTree = "<group>"; };
 		84C9AADA1582EBCF00D40F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		84C9AADD1582EBCF00D40F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		84C9AADF1582EBCF00D40F29 /* PLViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLViewController.h; sourceTree = "<group>"; };
-		84C9AAE01582EBCF00D40F29 /* PLViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLViewController.m; sourceTree = "<group>"; };
 		84C9AAE71582EBCF00D40F29 /* PhilosophyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhilosophyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C9AAE81582EBCF00D40F29 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		84C9AAF01582EBCF00D40F29 /* PhilosophyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhilosophyTests-Info.plist"; sourceTree = "<group>"; };
 		84C9AAF21582EBCF00D40F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		84C9AAF41582EBCF00D40F29 /* PhilosophyTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhilosophyTests.h; sourceTree = "<group>"; };
 		84C9AAF51582EBCF00D40F29 /* PhilosophyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhilosophyTests.m; sourceTree = "<group>"; };
+		84C9AB031582ED0400D40F29 /* PLNotesListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLNotesListViewController.h; path = "View Controllers/PLNotesListViewController.h"; sourceTree = "<group>"; };
+		84C9AB041582ED0400D40F29 /* PLNotesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLNotesListViewController.m; path = "View Controllers/PLNotesListViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,12 +113,11 @@
 		84C9AACD1582EBCF00D40F29 /* Philosophy */ = {
 			isa = PBXGroup;
 			children = (
+				84C9AAFF1582EC8D00D40F29 /* View Controllers */,
 				84C9AAD61582EBCF00D40F29 /* PLAppDelegate.h */,
 				84C9AAD71582EBCF00D40F29 /* PLAppDelegate.m */,
 				84C9AAD91582EBCF00D40F29 /* MainStoryboard_iPhone.storyboard */,
 				84C9AADC1582EBCF00D40F29 /* MainStoryboard_iPad.storyboard */,
-				84C9AADF1582EBCF00D40F29 /* PLViewController.h */,
-				84C9AAE01582EBCF00D40F29 /* PLViewController.m */,
 				84C9AACE1582EBCF00D40F29 /* Supporting Files */,
 			);
 			path = Philosophy;
@@ -152,6 +151,15 @@
 				84C9AAF11582EBCF00D40F29 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84C9AAFF1582EC8D00D40F29 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84C9AB031582ED0400D40F29 /* PLNotesListViewController.h */,
+				84C9AB041582ED0400D40F29 /* PLNotesListViewController.m */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,7 +272,7 @@
 			files = (
 				84C9AAD41582EBCF00D40F29 /* main.m in Sources */,
 				84C9AAD81582EBCF00D40F29 /* PLAppDelegate.m in Sources */,
-				84C9AAE11582EBCF00D40F29 /* PLViewController.m in Sources */,
+				84C9AB051582ED0400D40F29 /* PLNotesListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

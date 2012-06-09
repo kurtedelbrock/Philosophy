@@ -1,5 +1,5 @@
 //
-//  PLViewController.h
+//  PLNotesListViewController.h
 //  Philosophy
 //
 //  Created by Jenny Zhang on 6/8/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PLViewController : UIViewController
+@interface PLNotesListViewController : UITableViewController
 
 @end

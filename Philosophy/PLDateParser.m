@@ -29,4 +29,22 @@
     return [dateFormatter stringFromDate:date];
 }
 
+- (NSString *) parseTime:(NSDate *)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    return [dateFormatter stringFromDate:date];
+}
+
+- (BOOL) isDateToday:(NSDate *)date
+{
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateComponents *components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:[NSDate date]];
+    NSDate *today = [cal dateFromComponents:components];
+    components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit) fromDate:date];
+    NSDate *otherDate = [cal dateFromComponents:components];
+    
+    return [today isEqualToDate:otherDate];
+}
+
 @end

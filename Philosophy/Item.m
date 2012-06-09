@@ -17,7 +17,10 @@
 
 - (NSString *)filteredTimestamp
 {
-    return [[PLDateParser sharedParser] parseDate:self.timeStamp];
+    if ([[PLDateParser sharedParser] isDateToday:self.timeStamp])
+        return [[PLDateParser sharedParser] parseTime:self.timeStamp];
+    else
+        return [[PLDateParser sharedParser] parseDate:self.timeStamp];
 }
 
 - (void)setFilteredTimestamp

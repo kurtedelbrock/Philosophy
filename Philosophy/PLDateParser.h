@@ -12,5 +12,7 @@
 
 + (id)sharedParser;
 - (NSString *) parseDate:(NSDate *)date;
+- (BOOL) isDateToday:(NSDate *)date;
+- (NSString *) parseTime:(NSDate *)date;
 
 @end

@@ -146,7 +146,8 @@
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    [context deleteObject:[self.fetchedResultsController objectAtIndexPath:indexPath]];
 }
 
 #pragma mark - Fetched results controller

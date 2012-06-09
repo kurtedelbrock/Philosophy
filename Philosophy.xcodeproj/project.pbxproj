@@ -22,6 +22,7 @@
 		84C9AAF61582EBCF00D40F29 /* PhilosophyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9AAF51582EBCF00D40F29 /* PhilosophyTests.m */; };
 		84C9AB051582ED0400D40F29 /* PLNotesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9AB041582ED0400D40F29 /* PLNotesListViewController.m */; };
 		84C9AB081582EEE300D40F29 /* PLShowTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9AB071582EEE300D40F29 /* PLShowTaskViewController.m */; };
+		84C9AB0A1582F76A00D40F29 /* task-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C9AB091582F76A00D40F29 /* task-background.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		84C9AB041582ED0400D40F29 /* PLNotesListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLNotesListViewController.m; path = "View Controllers/PLNotesListViewController.m"; sourceTree = "<group>"; };
 		84C9AB061582EEE300D40F29 /* PLShowTaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLShowTaskViewController.h; path = "View Controllers/PLShowTaskViewController.h"; sourceTree = "<group>"; };
 		84C9AB071582EEE300D40F29 /* PLShowTaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLShowTaskViewController.m; path = "View Controllers/PLShowTaskViewController.m"; sourceTree = "<group>"; };
+		84C9AB091582F76A00D40F29 /* task-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "task-background.png"; path = "Philosophy/Resources/task-background.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				84C9AAEE1582EBCF00D40F29 /* PhilosophyTests */,
 				84C9AAC61582EBCF00D40F29 /* Frameworks */,
 				84C9AAC41582EBCF00D40F29 /* Products */,
+				84C9AB0B1582F77200D40F29 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -167,6 +170,14 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		84C9AB0B1582F77200D40F29 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84C9AB091582F76A00D40F29 /* task-background.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -241,6 +252,7 @@
 				84C9AAD21582EBCF00D40F29 /* InfoPlist.strings in Resources */,
 				84C9AADB1582EBCF00D40F29 /* MainStoryboard_iPhone.storyboard in Resources */,
 				84C9AADE1582EBCF00D40F29 /* MainStoryboard_iPad.storyboard in Resources */,
+				84C9AB0A1582F76A00D40F29 /* task-background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -413,6 +413,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Philosophy/Philosophy-Prefix.pch";
 				INFOPLIST_FILE = "Philosophy/Philosophy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -424,6 +425,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Philosophy/Philosophy-Prefix.pch";
 				INFOPLIST_FILE = "Philosophy/Philosophy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -482,6 +484,7 @@
 				84C9AAFB1582EBCF00D40F29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		84C9AAFC1582EBCF00D40F29 /* Build configuration list for PBXNativeTarget "PhilosophyTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +493,7 @@
 				84C9AAFE1582EBCF00D40F29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

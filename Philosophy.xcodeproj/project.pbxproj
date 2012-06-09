@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842B4B3C15838CCF006347BD /* libFlurryAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 842B4B3B15838CCF006347BD /* libFlurryAnalytics.a */; };
 		8438A061158328C0006EEFA5 /* paper_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8438A05F158328C0006EEFA5 /* paper_background.png */; };
 		8438A062158328C0006EEFA5 /* paper_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8438A060158328C0006EEFA5 /* paper_background@2x.png */; };
 		8438A06415832F53006EEFA5 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8438A06315832F53006EEFA5 /* 20-gear2.png */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		842B4B3A15838CCF006347BD /* FlurryAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAnalytics.h; sourceTree = "<group>"; };
+		842B4B3B15838CCF006347BD /* libFlurryAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAnalytics.a; sourceTree = "<group>"; };
 		8438A05F158328C0006EEFA5 /* paper_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper_background.png; sourceTree = "<group>"; };
 		8438A060158328C0006EEFA5 /* paper_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper_background@2x.png"; sourceTree = "<group>"; };
 		8438A06315832F53006EEFA5 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
@@ -89,6 +92,7 @@
 				84C9AAC81582EBCF00D40F29 /* UIKit.framework in Frameworks */,
 				84C9AACA1582EBCF00D40F29 /* Foundation.framework in Frameworks */,
 				84C9AACC1582EBCF00D40F29 /* CoreGraphics.framework in Frameworks */,
+				842B4B3C15838CCF006347BD /* libFlurryAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +109,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842B4B3915838CCF006347BD /* FlurryAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				842B4B3A15838CCF006347BD /* FlurryAnalytics.h */,
+				842B4B3B15838CCF006347BD /* libFlurryAnalytics.a */,
+			);
+			path = FlurryAnalytics;
+			sourceTree = "<group>";
+		};
 		8438A0C915833498006EEFA5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +162,7 @@
 		84C9AACD1582EBCF00D40F29 /* Philosophy */ = {
 			isa = PBXGroup;
 			children = (
+				842B4B3915838CCF006347BD /* FlurryAnalytics */,
 				84C9AAFF1582EC8D00D40F29 /* View Controllers */,
 				84C9AAD61582EBCF00D40F29 /* PLAppDelegate.h */,
 				84C9AAD71582EBCF00D40F29 /* PLAppDelegate.m */,
@@ -448,6 +462,10 @@
 				GCC_PREFIX_HEADER = "Philosophy/Philosophy-Prefix.pch";
 				INFOPLIST_FILE = "Philosophy/Philosophy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Philosophy/FlurryAnalytics\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -460,6 +478,10 @@
 				GCC_PREFIX_HEADER = "Philosophy/Philosophy-Prefix.pch";
 				INFOPLIST_FILE = "Philosophy/Philosophy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Philosophy/FlurryAnalytics\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

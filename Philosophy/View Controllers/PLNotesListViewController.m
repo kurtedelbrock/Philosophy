@@ -84,6 +84,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     cell.textLabel.text = [[self.fetchedResultsController objectAtIndexPath:indexPath] valueForKey:@"title"];
+    cell.detailTextLabel.text = [[[self.fetchedResultsController objectAtIndexPath:indexPath] valueForKey:@"timeStamp"] description];
     
     return cell;
 }

@@ -180,21 +180,6 @@
         <image name="refresh.png" width="32" height="32"/>
         <image name="task-background.png" width="561" height="711"/>
     </resources>
-    <classes>
-        <class className="PLNotesListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PLNotesListViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="mainListTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="PLShowTaskViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PLShowTaskViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="deleteButtonPressed:"/>
-                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

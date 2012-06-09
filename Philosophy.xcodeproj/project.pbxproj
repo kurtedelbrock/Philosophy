@@ -14,6 +14,7 @@
 		8438A0BE15833181006EEFA5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8438A0BD15833181006EEFA5 /* CoreData.framework */; };
 		8438A0C515833204006EEFA5 /* Philosophy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8438A0C315833204006EEFA5 /* Philosophy.xcdatamodeld */; };
 		8438A0C815833491006EEFA5 /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 8438A0C715833491006EEFA5 /* Item.m */; };
+		8481D9CB158392B100F1D26A /* PLDateParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8481D9CA158392B100F1D26A /* PLDateParser.m */; };
 		84C9AAC81582EBCF00D40F29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C9AAC71582EBCF00D40F29 /* UIKit.framework */; };
 		84C9AACA1582EBCF00D40F29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C9AAC91582EBCF00D40F29 /* Foundation.framework */; };
 		84C9AACC1582EBCF00D40F29 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C9AACB1582EBCF00D40F29 /* CoreGraphics.framework */; };
@@ -55,6 +56,8 @@
 		8438A0C415833204006EEFA5 /* Philosophy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Philosophy.xcdatamodel; sourceTree = "<group>"; };
 		8438A0C615833491006EEFA5 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
 		8438A0C715833491006EEFA5 /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		8481D9C9158392B100F1D26A /* PLDateParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLDateParser.h; sourceTree = "<group>"; };
+		8481D9CA158392B100F1D26A /* PLDateParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLDateParser.m; sourceTree = "<group>"; };
 		84C9AAC31582EBCF00D40F29 /* Philosophy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Philosophy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C9AAC71582EBCF00D40F29 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84C9AAC91582EBCF00D40F29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -127,6 +130,15 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		8481D9C71583929600F1D26A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8481D9C9158392B100F1D26A /* PLDateParser.h */,
+				8481D9CA158392B100F1D26A /* PLDateParser.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		84C9AAB81582EBCE00D40F29 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +174,7 @@
 		84C9AACD1582EBCF00D40F29 /* Philosophy */ = {
 			isa = PBXGroup;
 			children = (
+				8481D9C71583929600F1D26A /* Helpers */,
 				842B4B3915838CCF006347BD /* FlurryAnalytics */,
 				84C9AAFF1582EC8D00D40F29 /* View Controllers */,
 				84C9AAD61582EBCF00D40F29 /* PLAppDelegate.h */,
@@ -351,6 +364,7 @@
 				84C9AB081582EEE300D40F29 /* PLShowTaskViewController.m in Sources */,
 				8438A0C515833204006EEFA5 /* Philosophy.xcdatamodeld in Sources */,
 				8438A0C815833491006EEFA5 /* Item.m in Sources */,
+				8481D9CB158392B100F1D26A /* PLDateParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

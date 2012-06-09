@@ -17,12 +17,12 @@
 
 - (NSString *)filteredTimestamp
 {
-    return @"Okay";
+    return [[PLDateParser sharedParser] parseDate:self.timeStamp];
 }
 
 - (void)setFilteredTimestamp
 {
-
+    
 }
 
 @end

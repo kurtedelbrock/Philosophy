@@ -16,6 +16,8 @@
 @synthesize mainListTableView;
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
+@synthesize addCellView = _addCellView;
+@synthesize addCellTextField = _addCellTextField;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -45,6 +47,8 @@
 - (void)viewDidUnload
 {
     [self setMainListTableView:nil];
+    [self setAddCellView:nil];
+    [self setAddCellTextField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -71,6 +75,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     static NSString *CellIdentifier = @"NoteCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
@@ -167,7 +172,7 @@
     [fetchRequest setFetchBatchSize:20];
     
     // Edit the sort key as appropriate.
-    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:NO];
+    NSSortDescriptor *sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"timeStamp" ascending:YES];
     NSArray *sortDescriptors = [NSArray arrayWithObjects:sortDescriptor, nil];
     
     [fetchRequest setSortDescriptors:sortDescriptors];
@@ -224,7 +229,7 @@
             break;
             
         case NSFetchedResultsChangeUpdate:
-            [self configureCell:[tableView cellForRowAtIndexPath:indexPath] atIndexPath:indexPath];
+            [tableView cellForRowAtIndexPath:indexPath];
             break;
             
         case NSFetchedResultsChangeMove:
@@ -249,18 +254,21 @@
  }
  */
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
-{
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.textLabel.text = [[object valueForKey:@"timeStamp"] description];
+- (IBAction)addButtonPressed:(id)sender {
+    self.addCellView.alpha = 1.0f;
+    self.addCellTextField.alpha = 1.0f;
+    self.addCellTextField.enabled = YES;
+    [self.addCellTextField becomeFirstResponder];
 }
 
-- (IBAction)addButtonPressed:(id)sender {
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
     NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
     NSEntityDescription *entity = [[self.fetchedResultsController fetchRequest] entity];
     NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:[entity name] inManagedObjectContext:context];
     
-    [newManagedObject setValue:@"Hello There" forKey:@"title"];
+    [newManagedObject setValue:self.addCellTextField.text forKey:@"title"];
+    [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
     
     // Save the context.
     NSError *error = nil;
@@ -270,5 +278,9 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+    self.addCellView.alpha = 0.0f;
+    self.addCellTextField.text = @"";
+    self.addCellTextField.enabled = NO;
+    [self.addCellTextField resignFirstResponder];
 }
 @end

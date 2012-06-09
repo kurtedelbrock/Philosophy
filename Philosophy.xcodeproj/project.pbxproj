@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8438A061158328C0006EEFA5 /* paper_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8438A05F158328C0006EEFA5 /* paper_background.png */; };
 		8438A062158328C0006EEFA5 /* paper_background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8438A060158328C0006EEFA5 /* paper_background@2x.png */; };
+		8438A06415832F53006EEFA5 /* 20-gear2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8438A06315832F53006EEFA5 /* 20-gear2.png */; };
 		84C9AAC81582EBCF00D40F29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C9AAC71582EBCF00D40F29 /* UIKit.framework */; };
 		84C9AACA1582EBCF00D40F29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C9AAC91582EBCF00D40F29 /* Foundation.framework */; };
 		84C9AACC1582EBCF00D40F29 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C9AACB1582EBCF00D40F29 /* CoreGraphics.framework */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		8438A05F158328C0006EEFA5 /* paper_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper_background.png; sourceTree = "<group>"; };
 		8438A060158328C0006EEFA5 /* paper_background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "paper_background@2x.png"; sourceTree = "<group>"; };
+		8438A06315832F53006EEFA5 /* 20-gear2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "20-gear2.png"; sourceTree = "<group>"; };
 		84C9AAC31582EBCF00D40F29 /* Philosophy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Philosophy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C9AAC71582EBCF00D40F29 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		84C9AAC91582EBCF00D40F29 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -188,6 +190,7 @@
 				84C9AB10158303C500D40F29 /* red_button.png */,
 				84C9AB11158303C500D40F29 /* red_button@2x.png */,
 				84C9AB0E1582FDAC00D40F29 /* refresh.png */,
+				8438A06315832F53006EEFA5 /* 20-gear2.png */,
 				84C9AB091582F76A00D40F29 /* task-background.png */,
 			);
 			name = Resources;
@@ -273,6 +276,7 @@
 				84C9AB13158303C500D40F29 /* red_button@2x.png in Resources */,
 				8438A061158328C0006EEFA5 /* paper_background.png in Resources */,
 				8438A062158328C0006EEFA5 /* paper_background@2x.png in Resources */,
+				8438A06415832F53006EEFA5 /* 20-gear2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

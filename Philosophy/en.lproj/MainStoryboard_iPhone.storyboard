@@ -52,6 +52,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Notes" id="64o-4x-azR">
+                        <barButtonItem key="leftBarButtonItem" image="20-gear2.png" id="knJ-0h-3zl"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="t4s-NY-sqp"/>
                     </navigationItem>
                     <connections>
@@ -176,6 +177,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="20-gear2.png" width="20" height="22"/>
         <image name="red_button.png" width="301" height="43"/>
         <image name="refresh.png" width="32" height="32"/>
         <image name="task-background.png" width="561" height="711"/>

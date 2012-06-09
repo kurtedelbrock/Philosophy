@@ -15,6 +15,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" red="0.79552041330645162" green="0.76238029233870963" blue="0.41381048387096775" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NoteCell" textLabel="OC0-j2-FYH" detailTextLabel="bfQ-tY-Zr1" style="IBUITableViewCellStyleValue1" id="Y6s-ck-Rg0">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -50,7 +51,9 @@
                             <outlet property="delegate" destination="qwS-5e-zeI" id="63X-LQ-6Em"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My Notes" id="64o-4x-azR"/>
+                    <navigationItem key="navigationItem" title="My Notes" id="64o-4x-azR">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="t4s-NY-sqp"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mainListTableView" destination="yo2-bY-Iv9" id="hkA-1p-c7X"/>
                     </connections>
@@ -162,6 +165,7 @@
                 <navigationController definesPresentationContext="YES" id="XVB-7J-QWw" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="cTz-XS-UIP">
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.20392156862745098" green="0.13725490196078433" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="qwS-5e-zeI" kind="relationship" relationship="rootViewController" id="qO1-1Z-MMa"/>

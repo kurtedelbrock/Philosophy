@@ -303,7 +303,7 @@
 
 - (void)cancelButtonPressed:(id)sender
 {
-    [self.navigationItem setLeftBarButtonItem:self.addButton animated:YES];
+    [self.navigationItem setRightBarButtonItem:self.addButton animated:YES];
     [self resetEditingMode];
 }
 

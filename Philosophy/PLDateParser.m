@@ -36,6 +36,13 @@
     return [dateFormatter stringFromDate:date];
 }
 
+- (NSString *) parseWeekday:(NSDate *)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"EEEE";
+    return [dateFormatter stringFromDate:date];
+}
+
 - (BOOL) isDateToday:(NSDate *)date
 {
     NSCalendar *cal = [NSCalendar currentCalendar];
@@ -45,6 +52,17 @@
     NSDate *otherDate = [cal dateFromComponents:components];
     
     return [today isEqualToDate:otherDate];
+}
+
+- (BOOL) isDateThisWeek:(NSDate *)date
+{
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDateComponents *components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSWeekCalendarUnit) fromDate:[NSDate date]];
+    NSDate *thisWeek = [cal dateFromComponents:components];
+    components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSWeekCalendarUnit) fromDate:date];
+    NSDate *otherDate = [cal dateFromComponents:components];
+    
+    return [thisWeek isEqualToDate:otherDate];
 }
 
 @end

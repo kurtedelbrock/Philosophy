@@ -10,4 +10,6 @@
 
 @interface PLNotesListViewController : UITableViewController
 
+@property (weak, nonatomic) IBOutlet UITableView *mainListTableView;
+
 @end

@@ -18,6 +18,8 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (weak, nonatomic) IBOutlet UIView *addCellView;
 @property (weak, nonatomic) IBOutlet UITextField *addCellTextField;
+@property (strong, nonatomic) UIBarButtonItem *cancelButton;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
 
 - (IBAction)addButtonPressed:(id)sender;
 

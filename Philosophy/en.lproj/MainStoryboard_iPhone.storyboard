@@ -75,6 +75,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="t4s-NY-sqp" id="m0O-BN-hhW"/>
                         <outlet property="addCellTextField" destination="aUD-Cv-ZPy" id="Nvd-yR-ifR"/>
                         <outlet property="addCellView" destination="RI7-Vl-1JX" id="y12-dJ-swl"/>
                         <outlet property="mainListTableView" destination="yo2-bY-Iv9" id="hkA-1p-c7X"/>

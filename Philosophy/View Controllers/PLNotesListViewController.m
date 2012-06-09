@@ -13,7 +13,8 @@
 @end
 
 @implementation PLNotesListViewController
-@synthesize mainListTableView;
+@synthesize addButton = _addButton;
+@synthesize mainListTableView, cancelButton;
 @synthesize fetchedResultsController = __fetchedResultsController;
 @synthesize managedObjectContext = __managedObjectContext;
 @synthesize addCellView = _addCellView;
@@ -37,6 +38,8 @@
 
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"paper_background.png"]];
     
+    self.cancelButton = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(cancelButtonPressed:)];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -49,6 +52,7 @@
     [self setMainListTableView:nil];
     [self setAddCellView:nil];
     [self setAddCellTextField:nil];
+    [self setAddButton:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -259,6 +263,13 @@
     self.addCellTextField.alpha = 1.0f;
     self.addCellTextField.enabled = YES;
     [self.addCellTextField becomeFirstResponder];
+    
+    if ([self.mainListTableView numberOfRowsInSection:0] > 4)
+    {
+        [self.mainListTableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:[self.mainListTableView numberOfRowsInSection:0]-1 inSection:0] atScrollPosition:UITableViewScrollPositionTop animated:YES];
+    }
+    
+    [self.navigationItem setRightBarButtonItem:self.cancelButton animated:YES];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -278,9 +289,22 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         abort();
     }
+    [self resetEditingMode];
+    return YES;
+}
+
+- (void)resetEditingMode
+{
     self.addCellView.alpha = 0.0f;
     self.addCellTextField.text = @"";
     self.addCellTextField.enabled = NO;
     [self.addCellTextField resignFirstResponder];
 }
+
+- (void)cancelButtonPressed:(id)sender
+{
+    [self.navigationItem setLeftBarButtonItem:self.addButton animated:YES];
+    [self resetEditingMode];
+}
+
 @end

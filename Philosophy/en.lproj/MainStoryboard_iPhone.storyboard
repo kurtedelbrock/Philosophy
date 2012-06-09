@@ -140,15 +140,34 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteButtonPressed:" destination="VUb-Rl-pZR" eventType="touchUpInside" id="ldh-WJ-dCF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.28220533288043481" green="0.28220533288043481" blue="0.28220533288043481" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="b57-cT-djx" appends="YES" id="Kli-5T-aoH"/>
+                            <outletCollection property="gestureRecognizers" destination="PAU-Cu-m7G" appends="YES" id="Zb8-YA-xvT"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Show Task" id="Iyx-0T-6dW"/>
                     <connections>
                         <outlet property="descriptionTextView" destination="kwC-dZ-P0h" id="Msk-cg-bOx"/>
+                        <outlet property="pageControls" destination="qQZ-cr-NS7" id="csS-h7-mo3"/>
                     </connections>
                 </viewController>
+                <swipeGestureRecognizer direction="right" id="b57-cT-djx">
+                    <connections>
+                        <action selector="reverseSwipe:" destination="VUb-Rl-pZR" id="kmi-Pf-FDq"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="PAU-Cu-m7G">
+                    <connections>
+                        <action selector="forwardSwipe:" destination="VUb-Rl-pZR" id="2kc-Pa-YLU"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1080" y="149"/>
         </scene>
@@ -180,6 +199,9 @@
         <class className="PLShowTaskViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PLShowTaskViewController.h"/>
             <relationships>
+                <relationship kind="action" name="deleteButtonPressed:"/>
+                <relationship kind="action" name="forwardSwipe:"/>
+                <relationship kind="action" name="reverseSwipe:"/>
                 <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
             </relationships>
         </class>

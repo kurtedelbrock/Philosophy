@@ -13,6 +13,7 @@
 @end
 
 @implementation PLShowTaskViewController
+@synthesize pageControls;
 @synthesize descriptionTextView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -37,6 +38,7 @@
 - (void)viewDidUnload
 {
     [self setDescriptionTextView:nil];
+    [self setPageControls:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -68,4 +70,19 @@
     [[tableView cellForRowAtIndexPath:indexPath] setSelected:NO animated:YES];
 }
 
+- (IBAction)reverseSwipe:(id)sender {
+    NSLog(@"Reverse swipe");
+    self.pageControls.currentPage--;
+}
+
+- (IBAction)forwardSwipe:(id)sender {
+    NSLog(@"Forward swipe");
+    self.pageControls.currentPage++;
+    
+}
+
+- (IBAction)deleteButtonPressed:(id)sender {
+    UIActionSheet *deleteSheet = [[UIActionSheet alloc] initWithTitle:@"Delete this task?" delegate:self cancelButtonTitle:@"Cancel" destructiveButtonTitle:@"Delete" otherButtonTitles:nil];
+    [deleteSheet showInView:self.view];
+}
 @end

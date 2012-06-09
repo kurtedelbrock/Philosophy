@@ -20,7 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIView *addCellView;
 @property (weak, nonatomic) IBOutlet UITextField *addCellTextField;
 @property (strong, nonatomic) UIBarButtonItem *cancelButton;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *addButton;
+@property (weak, nonatomic) UIBarButtonItem *addButton;
 
 - (IBAction)addButtonPressed:(id)sender;
 

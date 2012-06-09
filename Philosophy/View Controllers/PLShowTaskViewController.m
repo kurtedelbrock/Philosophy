@@ -31,6 +31,7 @@
     self.descriptionTextView.layer.borderWidth = 1.0f;
     self.descriptionTextView.layer.borderColor = [UIColor colorWithWhite:0.0f alpha:0.2f].CGColor;
     self.descriptionTextView.layer.cornerRadius = 10.0f;
+    self.descriptionTextView.layer.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.05f].CGColor;
 }
 
 - (void)viewDidUnload

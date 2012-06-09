@@ -13,6 +13,7 @@
 @end
 
 @implementation PLShowTaskViewController
+@synthesize descriptionTextView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,10 +28,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.descriptionTextView.layer.borderWidth = 1.0f;
+    self.descriptionTextView.layer.borderColor = [UIColor colorWithWhite:0.0f alpha:0.2f].CGColor;
+    self.descriptionTextView.layer.cornerRadius = 10.0f;
 }
 
 - (void)viewDidUnload
 {
+    [self setDescriptionTextView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

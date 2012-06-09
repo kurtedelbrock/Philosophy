@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
+#import "PLAppDelegate.h"
 
 @interface PLNotesListViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 

@@ -71,14 +71,11 @@
 }
 
 - (IBAction)reverseSwipe:(id)sender {
-    NSLog(@"Reverse swipe");
     self.pageControls.currentPage--;
 }
 
 - (IBAction)forwardSwipe:(id)sender {
-    NSLog(@"Forward swipe");
     self.pageControls.currentPage++;
-    
 }
 
 - (IBAction)deleteButtonPressed:(id)sender {

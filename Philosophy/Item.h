@@ -14,5 +14,6 @@
 
 @property (nonatomic, retain) NSDate * timeStamp;
 @property (nonatomic, retain) NSString * title;
+@property (nonatomic, retain) NSString * filteredTimestamp;
 
 @end

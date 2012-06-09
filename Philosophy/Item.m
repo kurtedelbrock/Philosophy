@@ -13,5 +13,16 @@
 
 @dynamic timeStamp;
 @dynamic title;
+@synthesize filteredTimestamp;
+
+- (NSString *)filteredTimestamp
+{
+    return @"Okay";
+}
+
+- (void)setFilteredTimestamp
+{
+
+}
 
 @end

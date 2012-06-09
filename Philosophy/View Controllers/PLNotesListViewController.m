@@ -83,8 +83,10 @@
     static NSString *CellIdentifier = @"NoteCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    Item *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    
     cell.textLabel.text = [[self.fetchedResultsController objectAtIndexPath:indexPath] valueForKey:@"title"];
-    cell.detailTextLabel.text = [[[self.fetchedResultsController objectAtIndexPath:indexPath] valueForKey:@"timeStamp"] description];
+    cell.detailTextLabel.text = item.filteredTimestamp;
     
     return cell;
 }

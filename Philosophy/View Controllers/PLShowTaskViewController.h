@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PLShowTaskViewController : UIViewController
+@interface PLShowTaskViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end

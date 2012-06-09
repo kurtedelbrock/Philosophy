@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
 
-@interface PLNotesListViewController : UITableViewController
+@interface PLNotesListViewController : UITableViewController <NSFetchedResultsControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *mainListTableView;
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 @end

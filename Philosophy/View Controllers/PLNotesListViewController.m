@@ -144,7 +144,7 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+{    
     // Navigation logic may go here. Create and push another view controller.
     /*
      <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
@@ -152,6 +152,29 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    // The sender is a table cell
+    // Make sure your segue name in storyboard is the same as this line
+    
+    /*
+    Item *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    PLShowTaskViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ShowTask"];
+    viewController.item = item;
+    
+    
+    if ([[segue identifier] isEqualToString:@"YOUR_SEGUE_NAME_HERE"])
+    {
+        // Get reference to the destination view controller
+        YourViewController *vc = [segue destinationViewController];
+        
+        // Pass any objects to the view controller here, like...
+        [vc setMyObjectHere:object];
+    }
+    */
 }
 
 - (void)tableView:(UITableView*)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath {

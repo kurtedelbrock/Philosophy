@@ -10,6 +10,7 @@
 #import <CoreData/CoreData.h>
 #import "PLAppDelegate.h"
 #import "Item.h"
+#import "PLShowTaskViewController.h"
 
 @interface PLNotesListViewController : UITableViewController <NSFetchedResultsControllerDelegate, UITextFieldDelegate>
 

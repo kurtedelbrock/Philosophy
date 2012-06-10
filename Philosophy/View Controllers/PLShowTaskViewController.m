@@ -14,7 +14,7 @@
 
 @implementation PLShowTaskViewController
 
-@synthesize descriptionTextView;
+@synthesize descriptionTextView, item;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -28,6 +28,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    NSLog(@"Item = %@", self.item);
+    
 	// Do any additional setup after loading the view.
     self.descriptionTextView.layer.borderWidth = 1.0f;
     self.descriptionTextView.layer.borderColor = [UIColor colorWithWhite:0.0f alpha:0.2f].CGColor;

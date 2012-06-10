@@ -8,10 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "Item.h"
 
 @interface PLShowTaskViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
+@property (nonatomic, retain) Item *item;
+
 - (IBAction)deleteButtonPressed:(id)sender;
+
 
 @end

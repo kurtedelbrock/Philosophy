@@ -54,6 +54,27 @@
     return [today isEqualToDate:otherDate];
 }
 
+- (BOOL) isYesterday:(NSDate *)date
+{
+    NSCalendar *cal = [NSCalendar currentCalendar];
+    NSDate *yesterday = [NSDate dateWithTimeIntervalSinceNow: -(60.0f*60.0f*24.0f)];
+    
+    NSDateComponents *currentDayComponents = [cal components:NSDayCalendarUnit fromDate:[NSDate date]];
+    NSDateComponents *setDayComponents = [cal components:NSDayCalendarUnit fromDate:yesterday];
+    
+    
+    
+    NSDate *currentDay = [cal dateFromComponents:currentDayComponents];
+    NSDate *setDay = [cal dateFromComponents:setDayComponents];
+    
+    return [currentDay isEqualToDate:setDay];
+}
+
+- (BOOL)isTomorrow:(NSDate *)date
+{
+    NSDate *tomorrow = [NSDate dateWithTimeIntervalSinceNow: (60.0f*60.0f*24.0f)];
+}
+
 - (BOOL) isDateThisWeek:(NSDate *)date
 {
     NSCalendar *cal = [NSCalendar currentCalendar];
@@ -81,6 +102,8 @@
 {
     if ([[PLDateParser sharedParser] isDateToday:date])
         return [[PLDateParser sharedParser] parseTime:date];
+    else if ([self isYesterday:date])
+        return @"Yesterday";
     else if ([[PLDateParser sharedParser] isDateThisWeek:date])
         return [self dayOfWeek:date];
     else

@@ -13,7 +13,10 @@
 
 @dynamic timeStamp;
 @dynamic title;
+@dynamic reminder;
+@dynamic itemDescription;
 @synthesize filteredTimestamp;
+
 
 - (NSString *)filteredTimestamp
 {

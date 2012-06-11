@@ -15,5 +15,7 @@
 @property (nonatomic, retain) NSDate * timeStamp;
 @property (nonatomic, retain) NSString * title;
 @property (nonatomic, retain) NSString * filteredTimestamp;
+@property (nonatomic, retain) NSDate * reminder;
+@property (nonatomic, retain) NSString * itemDescription;
 
 @end

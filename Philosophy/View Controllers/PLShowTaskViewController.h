@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (nonatomic, retain) Item *item;
+@property (weak, nonatomic) IBOutlet UILabel *itemTitle;
 
 - (IBAction)deleteButtonPressed:(id)sender;
 

@@ -13,6 +13,7 @@
 @end
 
 @implementation PLShowTaskViewController
+@synthesize itemTitle;
 
 @synthesize descriptionTextView, item;
 
@@ -29,7 +30,7 @@
 {
     [super viewDidLoad];
     
-    NSLog(@"Item = %@", self.item);
+    self.itemTitle.text = item.title;
     
 	// Do any additional setup after loading the view.
     self.descriptionTextView.layer.borderWidth = 1.0f;
@@ -41,6 +42,7 @@
 - (void)viewDidUnload
 {
     [self setDescriptionTextView:nil];
+    [self setItemTitle:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }

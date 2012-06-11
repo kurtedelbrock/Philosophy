@@ -59,10 +59,8 @@
     NSCalendar *cal = [NSCalendar currentCalendar];
     NSDate *yesterday = [NSDate dateWithTimeIntervalSinceNow: -(60.0f*60.0f*24.0f)];
     
-    NSDateComponents *currentDayComponents = [cal components:NSDayCalendarUnit fromDate:[NSDate date]];
-    NSDateComponents *setDayComponents = [cal components:NSDayCalendarUnit fromDate:yesterday];
-    
-    
+    NSDateComponents *currentDayComponents = [cal components:NSDayCalendarUnit fromDate:yesterday];
+    NSDateComponents *setDayComponents = [cal components:NSDayCalendarUnit fromDate:date];
     
     NSDate *currentDay = [cal dateFromComponents:currentDayComponents];
     NSDate *setDay = [cal dateFromComponents:setDayComponents];
@@ -72,7 +70,16 @@
 
 - (BOOL)isTomorrow:(NSDate *)date
 {
+    NSCalendar *cal = [NSCalendar currentCalendar];
     NSDate *tomorrow = [NSDate dateWithTimeIntervalSinceNow: (60.0f*60.0f*24.0f)];
+    
+    NSDateComponents *currentDayComponents = [cal components:NSDayCalendarUnit fromDate:tomorrow];
+    NSDateComponents *setDayComponents = [cal components:NSDayCalendarUnit fromDate:date];
+    
+    NSDate *currentDay = [cal dateFromComponents:currentDayComponents];
+    NSDate *setDay = [cal dateFromComponents:setDayComponents];
+    
+    return [currentDay isEqualToDate:setDay];
 }
 
 - (BOOL) isDateThisWeek:(NSDate *)date
@@ -101,9 +108,11 @@
 - (NSString *)readableDateString:(NSDate *)date
 {
     if ([[PLDateParser sharedParser] isDateToday:date])
-        return [[PLDateParser sharedParser] parseTime:date];
+        return @"Today";
     else if ([self isYesterday:date])
         return @"Yesterday";
+    else if ([self isTomorrow:date])
+        return @"Tomorrow";
     else if ([[PLDateParser sharedParser] isDateThisWeek:date])
         return [self dayOfWeek:date];
     else

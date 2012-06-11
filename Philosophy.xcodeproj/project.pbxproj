@@ -36,6 +36,8 @@
 		84C9AB13158303C500D40F29 /* red_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C9AB11158303C500D40F29 /* red_button@2x.png */; };
 		E04D041F15861AC500C8C65B /* PLTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E04D041E15861AC500C8C65B /* PLTaskCell.m */; };
 		E04D042B15864E6700C8C65B /* PLReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04D042A15864E6700C8C65B /* PLReminderViewController.m */; };
+		E04D04331586569D00C8C65B /* dark_denim@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E04D04311586569D00C8C65B /* dark_denim@2x.png */; };
+		E04D04341586569D00C8C65B /* dark_denim.png in Resources */ = {isa = PBXBuildFile; fileRef = E04D04321586569D00C8C65B /* dark_denim.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +92,8 @@
 		E04D041E15861AC500C8C65B /* PLTaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLTaskCell.m; sourceTree = "<group>"; };
 		E04D042915864E6700C8C65B /* PLReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PLReminderViewController.h; path = "View Controllers/PLReminderViewController.h"; sourceTree = "<group>"; };
 		E04D042A15864E6700C8C65B /* PLReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLReminderViewController.m; path = "View Controllers/PLReminderViewController.m"; sourceTree = "<group>"; };
+		E04D04311586569D00C8C65B /* dark_denim@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark_denim@2x.png"; sourceTree = "<group>"; };
+		E04D04321586569D00C8C65B /* dark_denim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark_denim.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -241,6 +245,8 @@
 		84C9AB0B1582F77200D40F29 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E04D04311586569D00C8C65B /* dark_denim@2x.png */,
+				E04D04321586569D00C8C65B /* dark_denim.png */,
 				8438A05F158328C0006EEFA5 /* paper_background.png */,
 				8438A060158328C0006EEFA5 /* paper_background@2x.png */,
 				84C9AB10158303C500D40F29 /* red_button.png */,
@@ -342,6 +348,8 @@
 				8438A061158328C0006EEFA5 /* paper_background.png in Resources */,
 				8438A062158328C0006EEFA5 /* paper_background@2x.png in Resources */,
 				8438A06415832F53006EEFA5 /* 20-gear2.png in Resources */,
+				E04D04331586569D00C8C65B /* dark_denim@2x.png in Resources */,
+				E04D04341586569D00C8C65B /* dark_denim.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

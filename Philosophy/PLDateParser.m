@@ -57,12 +57,24 @@
 - (BOOL) isDateThisWeek:(NSDate *)date
 {
     NSCalendar *cal = [NSCalendar currentCalendar];
-    NSDateComponents *components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSWeekCalendarUnit) fromDate:[NSDate date]];
-    NSDate *thisWeek = [cal dateFromComponents:components];
-    components = [cal components:(NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSWeekCalendarUnit) fromDate:date];
-    NSDate *otherDate = [cal dateFromComponents:components];
     
-    return [thisWeek isEqualToDate:otherDate];
+    NSDateComponents *todaysComponents =
+    [cal components:NSWeekCalendarUnit fromDate:date];
+    
+    NSUInteger todaysWeek = [todaysComponents week];
+    
+    
+    NSDate *anotherDate = [NSDate date];
+    
+    NSDateComponents *otherComponents =
+    [cal components:NSWeekCalendarUnit fromDate:anotherDate];
+    
+    NSUInteger anotherWeek = [otherComponents week];
+    
+    if (todaysWeek==anotherWeek || todaysWeek+1==anotherWeek)
+        return YES;
+    else
+        return NO;
 }
 
 - (NSString *)readableDateString:(NSDate *)date
@@ -70,7 +82,7 @@
     if ([[PLDateParser sharedParser] isDateToday:date])
         return [[PLDateParser sharedParser] parseTime:date];
     else if ([[PLDateParser sharedParser] isDateThisWeek:date])
-        return @"Monday";
+        return [self dayOfWeek:date];
     else
         return [[PLDateParser sharedParser] parseDate:date];
 }
@@ -78,6 +90,13 @@
 - (NSString *)readableDateAndTimeString:(NSDate *)date
 {
     return [NSString stringWithFormat:@"%@ at %@", [self readableDateString:date], @"3:45pm"];
+}
+
+-(NSString *)dayOfWeek:(NSDate *)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEEE"];
+    return [dateFormatter stringFromDate:date];
 }
 
 @end

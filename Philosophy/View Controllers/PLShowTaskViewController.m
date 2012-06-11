@@ -40,6 +40,7 @@
     self.descriptionTextView.layer.borderColor = [UIColor colorWithWhite:0.0f alpha:0.2f].CGColor;
     self.descriptionTextView.layer.cornerRadius = 10.0f;
     self.descriptionTextView.layer.backgroundColor = [UIColor colorWithWhite:0.0f alpha:0.05f].CGColor;
+    
 }
 
 - (void)viewDidUnload
@@ -68,6 +69,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     // Configure the cell...
+    if (self.item.reminder)
+        cell.textLabel.text = [[PLDateParser sharedParser] readableDateAndTimeString:self.item.reminder];
     
     return cell;
 }
@@ -112,6 +115,15 @@
         abort();
     }
     [self.descriptionTextView resignFirstResponder];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"RemindSegue"])
+    {
+        PLReminderViewController *vc = [segue destinationViewController];
+        vc.item = self.item;
+    }
 }
 
 @end

@@ -14,6 +14,7 @@
 
 @implementation PLReminderViewController
 @synthesize dateField;
+@synthesize item;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -29,7 +30,6 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dark_denim.png"]];
-    
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -53,5 +53,13 @@
 
 - (IBAction)datePickerChanged:(id)sender {
     self.dateField.text = [[PLDateParser sharedParser] readableDateAndTimeString:[sender date]];
+    self.item.reminder = [sender date];
+    NSError *error = nil;
+    if (![[self.item managedObjectContext] save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development. 
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
 }
 @end

@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "PLDateParser.h"
+#import "Item.h"
 
 @interface PLReminderViewController : UITableViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *dateField;
+@property (nonatomic, retain) Item *item;
 
 - (IBAction)datePickerChanged:(id)sender;
 

@@ -30,6 +30,8 @@
 {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dark_denim.png"]];
+    
     self.itemTitle.text = item.title;
     self.descriptionTextView.text = [item printDescription];
     

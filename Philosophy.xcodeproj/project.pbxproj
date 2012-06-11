@@ -34,6 +34,7 @@
 		84C9AB0F1582FDAC00D40F29 /* refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C9AB0E1582FDAC00D40F29 /* refresh.png */; };
 		84C9AB12158303C500D40F29 /* red_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C9AB10158303C500D40F29 /* red_button.png */; };
 		84C9AB13158303C500D40F29 /* red_button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84C9AB11158303C500D40F29 /* red_button@2x.png */; };
+		E04D041F15861AC500C8C65B /* PLTaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E04D041E15861AC500C8C65B /* PLTaskCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,8 @@
 		84C9AB0E1582FDAC00D40F29 /* refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = refresh.png; path = Philosophy/Resources/refresh.png; sourceTree = "<group>"; };
 		84C9AB10158303C500D40F29 /* red_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_button.png; sourceTree = "<group>"; };
 		84C9AB11158303C500D40F29 /* red_button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "red_button@2x.png"; sourceTree = "<group>"; };
+		E04D041D15861AC500C8C65B /* PLTaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLTaskCell.h; sourceTree = "<group>"; };
+		E04D041E15861AC500C8C65B /* PLTaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLTaskCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +177,7 @@
 		84C9AACD1582EBCF00D40F29 /* Philosophy */ = {
 			isa = PBXGroup;
 			children = (
+				E04D041B15861AA900C8C65B /* Cells */,
 				8481D9C71583929600F1D26A /* Helpers */,
 				842B4B3915838CCF006347BD /* FlurryAnalytics */,
 				84C9AAFF1582EC8D00D40F29 /* View Controllers */,
@@ -241,6 +245,15 @@
 				84C9AB091582F76A00D40F29 /* task-background.png */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		E04D041B15861AA900C8C65B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				E04D041D15861AC500C8C65B /* PLTaskCell.h */,
+				E04D041E15861AC500C8C65B /* PLTaskCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +378,7 @@
 				8438A0C515833204006EEFA5 /* Philosophy.xcdatamodeld in Sources */,
 				8438A0C815833491006EEFA5 /* Item.m in Sources */,
 				8481D9CB158392B100F1D26A /* PLDateParser.m in Sources */,
+				E04D041F15861AC500C8C65B /* PLTaskCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

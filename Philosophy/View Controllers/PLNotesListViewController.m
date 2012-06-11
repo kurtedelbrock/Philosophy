@@ -82,7 +82,7 @@
 {
     
     static NSString *CellIdentifier = @"NoteCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    PLTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     Item *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
     

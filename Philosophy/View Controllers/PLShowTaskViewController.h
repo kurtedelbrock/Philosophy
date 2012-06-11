@@ -10,7 +10,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "Item.h"
 
-@interface PLShowTaskViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate>
+@interface PLShowTaskViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, UIActionSheetDelegate, UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextView;
 @property (nonatomic, retain) Item *item;

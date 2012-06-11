@@ -171,6 +171,9 @@
                                 <color key="textColor" red="0.28702445652173914" green="0.28702445652173914" blue="0.28702445652173914" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="VUb-Rl-pZR" id="DoQ-ny-TP7"/>
+                                </connections>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WGZ-Zq-wJU">
                                 <rect key="frame" x="30" y="318" width="260" height="37"/>

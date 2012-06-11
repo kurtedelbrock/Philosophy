@@ -119,9 +119,16 @@
         return [[PLDateParser sharedParser] parseDate:date];
 }
 
+- (NSString *)readableTimeString:(NSDate *)date
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setTimeStyle:NSDateFormatterShortStyle];
+    return [dateFormatter stringFromDate:date];
+}
+
 - (NSString *)readableDateAndTimeString:(NSDate *)date
 {
-    return [NSString stringWithFormat:@"%@ at %@", [self readableDateString:date], @"3:45pm"];
+    return [NSString stringWithFormat:@"%@ at %@", [self readableDateString:date], [self readableTimeString:date]];
 }
 
 -(NSString *)dayOfWeek:(NSDate *)date

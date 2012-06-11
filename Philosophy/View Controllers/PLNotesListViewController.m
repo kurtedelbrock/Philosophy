@@ -303,6 +303,7 @@
     
         [newManagedObject setValue:self.addCellTextField.text forKey:@"title"];
         [newManagedObject setValue:[NSDate date] forKey:@"timeStamp"];
+        [newManagedObject setValue:@"" forKey:@"itemDescription"];
     
         // Save the context.
         NSError *error = nil;

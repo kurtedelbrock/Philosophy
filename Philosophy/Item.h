@@ -18,4 +18,6 @@
 @property (nonatomic, retain) NSDate * reminder;
 @property (nonatomic, retain) NSString * itemDescription;
 
+- (NSString *)printDescription;
+
 @end

@@ -31,6 +31,7 @@
     [super viewDidLoad];
     
     self.itemTitle.text = item.title;
+    self.descriptionTextView.text = [item printDescription];
     
 	// Do any additional setup after loading the view.
     self.descriptionTextView.layer.borderWidth = 1.0f;

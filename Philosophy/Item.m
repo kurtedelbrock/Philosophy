@@ -33,4 +33,12 @@
     
 }
 
+- (NSString *)printDescription
+{
+    if ([self.itemDescription length] > 0)
+        return self.itemDescription;
+    else 
+        return @"Enter description...";
+}
+
 @end

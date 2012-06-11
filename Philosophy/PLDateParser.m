@@ -65,4 +65,19 @@
     return [thisWeek isEqualToDate:otherDate];
 }
 
+- (NSString *)readableDateString:(NSDate *)date
+{
+    if ([[PLDateParser sharedParser] isDateToday:date])
+        return [[PLDateParser sharedParser] parseTime:date];
+    else if ([[PLDateParser sharedParser] isDateThisWeek:date])
+        return @"Monday";
+    else
+        return [[PLDateParser sharedParser] parseDate:date];
+}
+
+- (NSString *)readableDateAndTimeString:(NSDate *)date
+{
+    return [NSString stringWithFormat:@"%@ at %@", [self readableDateString:date], @"3:45pm"];
+}
+
 @end

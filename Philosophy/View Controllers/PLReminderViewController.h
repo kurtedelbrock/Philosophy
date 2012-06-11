@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PLDateParser.h"
 
 @interface PLReminderViewController : UITableViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *dateField;
+
+- (IBAction)datePickerChanged:(id)sender;
 
 @end

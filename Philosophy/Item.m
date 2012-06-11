@@ -20,12 +20,7 @@
 
 - (NSString *)filteredTimestamp
 {
-    if ([[PLDateParser sharedParser] isDateToday:self.timeStamp])
-        return [[PLDateParser sharedParser] parseTime:self.timeStamp];
-    else if ([[PLDateParser sharedParser] isDateThisWeek:self.timeStamp])
-        return @"Monday";
-    else
-        return [[PLDateParser sharedParser] parseDate:self.timeStamp];
+    return [[PLDateParser sharedParser] readableDateString:self.timeStamp];
 }
 
 - (void)setFilteredTimestamp

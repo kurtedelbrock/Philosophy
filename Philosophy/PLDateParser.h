@@ -15,5 +15,7 @@
 - (BOOL) isDateToday:(NSDate *)date;
 - (BOOL) isDateThisWeek:(NSDate *)date;
 - (NSString *) parseTime:(NSDate *)date;
+- (NSString *)readableDateString:(NSDate *)date;
+- (NSString *)readableDateAndTimeString:(NSDate *)date;
 
 @end

@@ -13,6 +13,7 @@
 @end
 
 @implementation PLReminderViewController
+@synthesize dateField;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -39,6 +40,7 @@
 
 - (void)viewDidUnload
 {
+    [self setDateField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -49,4 +51,7 @@
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
+- (IBAction)datePickerChanged:(id)sender {
+    self.dateField.text = [[PLDateParser sharedParser] readableDateAndTimeString:[sender date]];
+}
 @end

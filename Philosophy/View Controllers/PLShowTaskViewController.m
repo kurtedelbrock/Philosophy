@@ -71,6 +71,7 @@
     // Configure the cell...
     if (self.item.reminder)
         cell.textLabel.text = [[PLDateParser sharedParser] readableDateAndTimeString:self.item.reminder];
+    [self.item addObserver:self forKeyPath:@"reminder" options:NSKeyValueObservingOptionNew context:(__bridge void*)cell];
     
     return cell;
 }
@@ -124,6 +125,12 @@
         PLReminderViewController *vc = [segue destinationViewController];
         vc.item = self.item;
     }
+}
+
+-(void) observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    UITableViewCell *cell = (__bridge UITableViewCell *)context;
+    cell.textLabel.text = [[PLDateParser sharedParser] readableDateAndTimeString:self.item.reminder];
 }
 
 @end

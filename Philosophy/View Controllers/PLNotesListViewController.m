@@ -85,6 +85,7 @@
     PLTaskCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     Item *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    cell.item = item;
     
     cell.textLabel.text = [[self.fetchedResultsController objectAtIndexPath:indexPath] valueForKey:@"title"];
     cell.detailTextLabel.text = item.filteredTimestamp;
@@ -160,21 +161,14 @@
     // The sender is a table cell
     // Make sure your segue name in storyboard is the same as this line
     
-    /*
-    Item *item = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    PLShowTaskViewController *viewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ShowTask"];
-    viewController.item = item;
-    
-    
-    if ([[segue identifier] isEqualToString:@"YOUR_SEGUE_NAME_HERE"])
+    if ([[segue identifier] isEqualToString:@"ShowSegue"])
     {
         // Get reference to the destination view controller
-        YourViewController *vc = [segue destinationViewController];
+        PLShowTaskViewController *vc = [segue destinationViewController];
         
         // Pass any objects to the view controller here, like...
-        [vc setMyObjectHere:object];
+        [vc setItem:[sender item]];
     }
-    */
 }
 
 - (void)tableView:(UITableView*)tableView willBeginEditingRowAtIndexPath:(NSIndexPath *)indexPath {

@@ -57,7 +57,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="VUb-Rl-pZR" kind="push" id="g33-TR-sIx"/>
+                                    <segue destination="VUb-Rl-pZR" kind="push" identifier="ShowSegue" id="g33-TR-sIx"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -203,27 +203,6 @@
         <image name="refresh.png" width="32" height="32"/>
         <image name="task-background.png" width="561" height="711"/>
     </resources>
-    <classes>
-        <class className="PLNotesListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PLNotesListViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="addButtonPressed:"/>
-                <relationship kind="outlet" name="addCellTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="addCellView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="mainListTableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="PLShowTaskViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PLShowTaskViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="deleteButtonPressed:"/>
-                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-        <class className="PLTaskCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PLTaskCell.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

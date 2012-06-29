@@ -22,7 +22,6 @@
 		84C9AAD41582EBCF00D40F29 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9AAD31582EBCF00D40F29 /* main.m */; };
 		84C9AAD81582EBCF00D40F29 /* PLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84C9AAD71582EBCF00D40F29 /* PLAppDelegate.m */; };
 		84C9AADB1582EBCF00D40F29 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C9AAD91582EBCF00D40F29 /* MainStoryboard_iPhone.storyboard */; };
-		84C9AADE1582EBCF00D40F29 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84C9AADC1582EBCF00D40F29 /* MainStoryboard_iPad.storyboard */; };
 		84C9AAE91582EBCF00D40F29 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C9AAE81582EBCF00D40F29 /* SenTestingKit.framework */; };
 		84C9AAEA1582EBCF00D40F29 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C9AAC71582EBCF00D40F29 /* UIKit.framework */; };
 		84C9AAEB1582EBCF00D40F29 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C9AAC91582EBCF00D40F29 /* Foundation.framework */; };
@@ -38,6 +37,7 @@
 		E04D042B15864E6700C8C65B /* PLReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E04D042A15864E6700C8C65B /* PLReminderViewController.m */; };
 		E04D04331586569D00C8C65B /* dark_denim@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E04D04311586569D00C8C65B /* dark_denim@2x.png */; };
 		E04D04341586569D00C8C65B /* dark_denim.png in Resources */ = {isa = PBXBuildFile; fileRef = E04D04321586569D00C8C65B /* dark_denim.png */; };
+		E06B70C3159DC75800FF4888 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06B70C2159DC75800FF4888 /* MainStoryboard_iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +73,6 @@
 		84C9AAD61582EBCF00D40F29 /* PLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PLAppDelegate.h; sourceTree = "<group>"; };
 		84C9AAD71582EBCF00D40F29 /* PLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PLAppDelegate.m; sourceTree = "<group>"; };
 		84C9AADA1582EBCF00D40F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
-		84C9AADD1582EBCF00D40F29 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		84C9AAE71582EBCF00D40F29 /* PhilosophyTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhilosophyTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C9AAE81582EBCF00D40F29 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		84C9AAF01582EBCF00D40F29 /* PhilosophyTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PhilosophyTests-Info.plist"; sourceTree = "<group>"; };
@@ -94,6 +93,7 @@
 		E04D042A15864E6700C8C65B /* PLReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PLReminderViewController.m; path = "View Controllers/PLReminderViewController.m"; sourceTree = "<group>"; };
 		E04D04311586569D00C8C65B /* dark_denim@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dark_denim@2x.png"; sourceTree = "<group>"; };
 		E04D04321586569D00C8C65B /* dark_denim.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dark_denim.png; sourceTree = "<group>"; };
+		E06B70C2159DC75800FF4888 /* MainStoryboard_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard_iPad.storyboard; path = ../MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,7 @@
 				8438A0C315833204006EEFA5 /* Philosophy.xcdatamodeld */,
 				8438A0C915833498006EEFA5 /* Models */,
 				84C9AAD91582EBCF00D40F29 /* MainStoryboard_iPhone.storyboard */,
-				84C9AADC1582EBCF00D40F29 /* MainStoryboard_iPad.storyboard */,
+				E06B70C2159DC75800FF4888 /* MainStoryboard_iPad.storyboard */,
 				84C9AACE1582EBCF00D40F29 /* Supporting Files */,
 			);
 			path = Philosophy;
@@ -340,7 +340,6 @@
 			files = (
 				84C9AAD21582EBCF00D40F29 /* InfoPlist.strings in Resources */,
 				84C9AADB1582EBCF00D40F29 /* MainStoryboard_iPhone.storyboard in Resources */,
-				84C9AADE1582EBCF00D40F29 /* MainStoryboard_iPad.storyboard in Resources */,
 				84C9AB0A1582F76A00D40F29 /* task-background.png in Resources */,
 				84C9AB0F1582FDAC00D40F29 /* refresh.png in Resources */,
 				84C9AB12158303C500D40F29 /* red_button.png in Resources */,
@@ -350,6 +349,7 @@
 				8438A06415832F53006EEFA5 /* 20-gear2.png in Resources */,
 				E04D04331586569D00C8C65B /* dark_denim@2x.png in Resources */,
 				E04D04341586569D00C8C65B /* dark_denim.png in Resources */,
+				E06B70C3159DC75800FF4888 /* MainStoryboard_iPad.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,14 +429,6 @@
 				84C9AADA1582EBCF00D40F29 /* en */,
 			);
 			name = MainStoryboard_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		84C9AADC1582EBCF00D40F29 /* MainStoryboard_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				84C9AADD1582EBCF00D40F29 /* en */,
-			);
-			name = MainStoryboard_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		84C9AAF11582EBCF00D40F29 /* InfoPlist.strings */ = {
